@@ -1,0 +1,44 @@
+% !TEX root = ../../statikz2020/statikz2020.tex
+
+\begin{tikzpicture}   
+
+	\coordinate (O) at (0,0);
+	\coordinate (A) at (0,-2);
+	\coordinate (B) at (4,0);
+	\coordinate (C) at (2,-3);	
+
+    \gettikzxy{(A)}{\ax}{\ay}
+    \gettikzxy{(B)}{\bx}{\by}
+    \gettikzxy{(C)}{\cx}{\cy}
+    \gettikzxy{(O)}{\ox}{\oy}
+
+    \small
+    \draw[thin] ($(C)+(-1,0)$)--($(C)+(0.65,0)$);
+    \draw[ultra thick, Green] (A)--(C);
+    \draw[ultra thick, Green] (B)--(C);
+    \draw[ultra thick, Green] (C)-- +(0,-1);
+
+    \fill[ball color=green]  (A)circle(2pt)node[above right]{$A$};
+    \fill[ball color=green]  (B)circle(2pt)node[below right]{$B$};
+    \fill[ball color=green]  (C)circle(2pt)node[below right]{$C$};
+
+    \fill[fill=DarkGoldenrod] ($(A)+(0,-3.5)$)--(O)--($(B)+(1,0)$)-- ++(0,1)--(\ox-1cm,\oy+1cm)--(\ox-1cm,\ay-3.5cm)--cycle;
+    \draw ($(A)+(0,-3.5)$)--(O)--($(B)+(1,0)$);
+
+    \node[xshift=-0.7cm,yshift=1.5mm] at (C) {$\theta$};
+    \node[xshift=0.35cm,yshift=1.75mm] at (C) {$\phi$};
+
+    \shade[left color = DarkGoldenrod, right color = DarkGoldenrod, middle color = LightGoldenrod!50] (\cx+0.35cm,\cy-1cm)-- ++(0.35,-1)-- ++(-1.4,0)-- ++(0.35,1)--cycle;
+    \draw (\cx+0.35cm,\cy-1cm)-- ++(0.35,-1)-- ++(-1.4,0)-- ++(0.35,1)--cycle;
+
+    \draw (\ax-2.5mm,\ay)--(\ax-7.5mm,\ay);
+    \draw (\ox-2.5mm,\oy)--(\ox-7.5mm,\oy);
+    \draw[Stealth-Stealth] (\ax-5mm,\ay)--node[fill=DarkGoldenrod, sloped]{$\qquad\qquad$ }(\ox-5mm,\oy);
+
+    \draw (\ox,\oy+2.5mm)--(\ox,\oy+7.5mm);
+    \draw (\bx,\by+2.5mm)--(\bx,\by+7.5mm);
+    \draw[Stealth-Stealth] (\ox,\oy+5mm)--node[fill=DarkGoldenrod, sloped]{$\qquad\qquad$}(\bx,\by+5mm);
+    
+    \node at ($(C)+(0,-1.5)$){\large $W$};
+
+\end{tikzpicture}
