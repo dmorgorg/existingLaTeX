@@ -1,113 +1,67 @@
 % !TEX root = ../../statikz2020/statikz2020.tex
 
+\resizebox{0.5\textwidth}{!}{%
+\begin{tikzpicture}
 
-\makeatletter
-\providecommand{\gettikzxy}[3]{%
-	\tikz@scan@one@point\pgfutil@firstofone#1\relax
-	\edef#2{\the\pgf@x}%
-	\edef#3{\the\pgf@y}%
-}
-\makeatother
+	\coordinate (C) at (0,0);
+	\coordinate (B) at (0,3);
+	\coordinate (A) at (0,5);
+	\coordinate (D) at (3.5,0);
+	\coordinate (E) at (3.5,-1.75);
+    \coordinate (F) at (-3,3);
+
+    \gettikzxy{(A)}{\ax}{\ay}
+    \gettikzxy{(B)}{\bx}{\by}
+    \gettikzxy{(C)}{\cx}{\cy}
+    \gettikzxy{(D)}{\dx}{\dy}
+    \gettikzxy{(E)}{\ex}{\ey}
+    \gettikzxy{(F)}{\fx}{\fy}
+    
+    \PinnedConnection{C}{CadetBlue!75}{Black}{0.5}{0.125};
+    \filldraw[fill=DarkSeaGreen!75, draw=black] ($ (A)+(0,0.25)$) arc(90:180:0.25) --($ (C)+(-0.25,0) $)arc(180:270:0.25) -- ($ (D)+(0.25,-0.25)$)arc(270:360:0.25)arc[start angle=0, end angle=90, x radius=4cm, y radius=5.25cm];
+
+    \PinnedConnection[-90]{F}{CadetBlue!75}{Black}{0.5}{0.125};
+    
+    \PinnedConnection{E}{CadetBlue!75}{Black}{0.5}{0.125};
+    \Member{F}{B}{Grey!80!white}{Grey!10}{black}{0.3}{0.14}{0.125};
+    \Member{D}{E}{Grey!80!white}{Grey!10}{black}{0.45}{0.14}{0.125};
+    
+    \filldraw[fill=white, draw=black] (A) circle (3pt) node[xshift=1.75mm, yshift=-2mm]{\Large $A$};
+    \shadedraw[ball color=Teal] (B) circle (3pt) node[right, xshift=0.5mm]{\Large $B$};
+    \shadedraw[ball color=Teal] (C) circle (4.5pt) node[above right]{\Large $C$};
+    \shadedraw[ball color=Teal] (D) circle (3pt) node[above left, xshift=-1mm]{\Large $D$};
+    \shadedraw[ball color=Teal] (E) circle (3pt) node[right, xshift=1.5mm]{\Large $E$};
+    \shadedraw[ball color=Teal] (F) circle (3pt) node[above, xshift=0.75mm, yshift=1.5mm]{\Large $F$};
+
+    \fill[right color=CadetBlue, left color=CadetBlue!25] (\fx-0.5cm,\fy+1cm) rectangle ++(-0.5,-2);
+    \fill[top color=CadetBlue, bottom color=CadetBlue!25] (\cx-1cm,\cy-0.5cm) rectangle ++(2,-0.5);
+    \fill[top color=CadetBlue, bottom color=CadetBlue!25] (\ex-1cm,\ey-0.5cm) rectangle ++(2,-0.5);
+    \draw (\fx-0.5cm,\fy+1cm) -- ++(0,-2);
+    \draw (\cx-1cm,\cy-0.5cm) -- ++(2,0);
+    \draw (\ex-1cm,\ey-0.5cm) -- ++(2,0);
+    
+
+    \draw ($ (F) + (0,-0.5) $) -- ($ (\fx, \ey+0.125cm)$);
+    \draw ($ (D)+(0,-0.25)$) -- ($ (E)+(0,0.25) $);
+    \draw ($ (C)+(0,-0.3)$) -- ($ (\cx, \ey+0.125cm) $);
+    \draw ($ (A)+(0,-0.2)$) -- ($ (B)+(0,0.25) $);
+    \draw ($ (B)+(0,-0.25)$) -- ($ (C)+(0,0.25) $);
+    \draw ($ (A)+(-0.5,0)$) -- +(-1.5,0);
+    \draw ($ (B)+(-0.5,0)$) -- +(-1.5,0);
+    \draw ($ (C)+(-0.5,0)$) -- +(-1.5,0);
+    \draw ($ (C)+(0.25,0)$) -- ($(D)+(-0.375,0)$);
+    \draw [Stealth-stealth] ($ (A)+(-1.25,0)$) -- node[fill=white, inner sep=3mm]{$\quad$}($ (B)+(-1.25,0)$);
+    \draw [stealth-Stealth] ($ (B)+(-1.25,0)$) -- node[fill=white, inner sep=3mm]{$\quad$}($ (C)+(-1.25,0)$);
+    \draw [Stealth-Stealth] ($ (\fx, \ey+0.375cm)$) -- node[fill=white]{$\qquad\qquad$}($ (\cx, \ey+0.375cm)$);
+    \draw [Stealth-Stealth] ($ (\cx, \ey+0.375cm)$) -- node[fill=white]{$\qquad\qquad$}($ (\ex, \ey+0.375cm)$);
+
+    \draw [-Stealth, ultra thick, Maroon] (A)--+(3,0)node[black, xshift=2mm]{\Large $P$};
 
 
-\begin{tikzpicture}[scale=\scale]
-
-	\def\thickness{thick}
-	% \def\stroke{black}
-	\def\hi{.225}
-	\def\radii{.225}
-	\def\extend{0.225}
-
-	\def\offset{0.4}
-
-	\coordinate (E) at (0,0);
-	\coordinate (F) at (3,0);
-	\coordinate (G) at (6,0);
-	\coordinate (A) at (9,0);
-	\coordinate (B) at (6,2.5);
-	\coordinate (C) at (3,3.75);
-	\coordinate (D) at (0,5);
-	\coordinate (Right) at ($ (A)+(1.5,0)$);
-	\coordinate (Bottom) at ($ (A)+(0,-1.5)$);
-
-	\shade[right color = DarkGrey, left color = LightGrey] ($(D)+(-0.66,1)$) rectangle ($(E)+(-2,-1.5)$);
-	\draw[thick, black] ($(D)+(-0.66,1)$) -- ($(E)+(-0.66,-1.5)$);
-
-	\PinnedConnection[-90]{D}{DarkGrey}{black}{0.65}{0.25}
-	\PinnedConnection[-90]{E}{DarkGrey}{black}{0.65}{0.25}
-
-
-	\gettikzxy{(A)}{\ax}{\ay}
-	\gettikzxy{(B)}{\bx}{\by}
-	\gettikzxy{(C)}{\cx}{\cy}
-	\gettikzxy{(D)}{\ddx}{\ddy}
-	\gettikzxy{(E)}{\ex}{\ey}
-	\gettikzxy{(F)}{\fx}{\fy}
-	\gettikzxy{(G)}{\gx}{\gy}
-	\gettikzxy{(Right)}{\rx}{\ry}
-	\gettikzxy{(Bottom)}{\bbx}{\bby}
-
-	\draw ($ (A)+(\offset,0)$) -- (\rx,\ay);
-	\draw ($ (B)+(1.25*\offset,0)$) -- (\rx,\by);
-	\draw ($ (C)+(2*\offset,0)$) -- (\rx,\cy);
-	\draw ($ (D)+(2*\offset,0)$) -- (\rx,\ddy);
-	\draw ($ (D)+(0, -\offset)$) -- (\ex,\ey+1.25*\offset cm);
-	\draw ($ (E)+(0, -\offset)$) -- (\ex,\bby);
-	\draw ($ (F)+(0, -\offset)$) -- (\fx,\bby);
-	\draw ($ (G)+(0, -\offset)$) -- (\gx,\bby);
-	\draw ($ (A)+(0, -\offset)$) -- (\ax,\bby);
-
-	\Large
-	\draw[latex-latex] (\ex,\bby+\offset cm) -- node[fill=white] {$\qquad\quad $}(\fx,\bby+\offset cm);
-	\draw[latex-latex] (\fx,\bby+\offset cm) -- node[fill=white] {$\qquad\quad $}(\gx,\bby+\offset cm);
-	\draw[latex-latex] (\gx,\bby+\offset cm) -- node[fill=white] {$\qquad\quad $}(\ax,\bby+\offset cm);
-	\draw[latex-latex] (\rx-\offset cm,\ay) -- node[fill=white, inner sep=3mm] {$\qquad\quad $}(\rx-\offset cm,\by);
-	\draw[latex-latex] (\rx-\offset cm,\by) -- node[fill=white, inner sep=3mm] {$\qquad\quad $}(\rx-\offset cm,\cy);
-	\draw[latex-latex] (\rx-\offset cm,\cy) -- node[fill=white, inner sep=3mm] {$\qquad\quad $}(\rx-\offset cm,\ddy);
-	
-
-	% \pgfoonew \BC=new rr(B,C,Burlywood1,black, 0.2)
-	% \pgfoonew \CD=new rr(C,D,Burlywood1,black, 0.2)
-	% \pgfoonew \EF=new rr(E,F,Burlywood1,black, 0.2)
-	% \pgfoonew \FG=new rr(G,F,Burlywood1,black, 0.2)
-	% \pgfoonew \AG=new rr(A,G,Burlywood1,black, 0.2)
-	% \pgfoonew \AB=new rr(A,B,Burlywood1,black, 0.2)
-	% \pgfoonew \CE=new rr(C,E,Burlywood1,black, 0.2)
-	% \pgfoonew \BF=new rr(B,F,Burlywood1,black, 0.2)
-	% \pgfoonew \CF=new rr(C,F,Burlywood1,black, 0.2)
-	% \pgfoonew \BG=new rr(B,G,Burlywood1,black, 0.2)
-
-	\Member{B}{C}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
-    \Member{C}{D}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
-    \Member{E}{F}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
-    \Member{F}{G}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
-    \Member{A}{G}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
-    \Member{A}{B}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
-	\Member{C}{E}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
-	\Member{B}{F}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
-    \Member{C}{F}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
-    \Member{B}{G}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
-
-	
-
-	
-
-	\shadedraw[ball color=Burlywood4] (A) circle (2.5pt) node[xshift=2mm, yshift=-3mm] {$A$};
-	\shadedraw[ball color=Burlywood4] (B) circle (2.5pt) node[xshift=2.5mm, yshift=3.5mm] {$B$};
-	\shadedraw[ball color=Burlywood4] (C) circle (2.5pt) node[xshift=2.5mm, yshift=3.5mm] {$C$};
-	\shadedraw[ball color=Burlywood4] (D) circle (2.5pt) node[xshift=2.5mm, yshift=3.5mm] {$D$};
-	\shadedraw[ball color=Burlywood4] (E) circle (2.5pt) node[xshift=2mm, yshift=-4mm] {$E$};
-	\shadedraw[ball color=Burlywood4] (F) circle (2.5pt) node[xshift=2mm, yshift=-4mm] {$F$};
-	\shadedraw[ball color=Burlywood4] (G) circle (2.5pt) node[xshift=2mm, yshift=-4mm] {$G$};
+   
 
 
 
-	% \draw[very thin,color=gray] (-0.3,-2.3) grid (2.9,3.3);
-	% \draw[->] (-0.2,0) -- (3.2,0) node[right] {$x$};
-	% \draw[->] (0,-2.5) -- (0,3.8) node[above] {$y$};
-	% \draw[domain=-0.2:2.5, color=red, thick] plot[id=1] function{(7-2*x)/3}
-	% node[below] {$2x+3y=7$};
-	% \draw[domain=-0.2:0.8, color=blue, thick] plot[id=2] function{6*x-1}
-	% node[right] {$6x-y=1$};
 
 \end{tikzpicture}
+}

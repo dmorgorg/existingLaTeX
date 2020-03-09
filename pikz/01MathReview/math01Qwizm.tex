@@ -1,5 +1,6 @@
 % !TEX root = ../../statikz2020/statikz2020.tex
 
+
 \makeatletter
 \providecommand{\gettikzxy}[3]{%
 	\tikz@scan@one@point\pgfutil@firstofone#1\relax
@@ -30,10 +31,10 @@
 	\coordinate (Bottom) at ($ (A)+(0,-1.5)$);
 
 	\shade[right color = DarkGrey, left color = LightGrey] ($(D)+(-0.66,1)$) rectangle ($(E)+(-2,-1.5)$);
-	\draw[black] ($(D)+(-0.66,1)$) -- ($(E)+(-0.66,-1.5)$);
+	\draw[thick, black] ($(D)+(-0.66,1)$) -- ($(E)+(-0.66,-1.5)$);
 
-	\PinnedConnection[-90]{D}{DarkGrey}{black}{0.65}{0.125}
-	\PinnedConnection[-90]{E}{DarkGrey}{black}{0.65}{0.125}
+	\PinnedConnection[-90]{D}{DarkGrey}{black}{0.65}{0.25}
+	\PinnedConnection[-90]{E}{DarkGrey}{black}{0.65}{0.25}
 
 
 	\gettikzxy{(A)}{\ax}{\ay}
@@ -57,12 +58,12 @@
 	\draw ($ (A)+(0, -\offset)$) -- (\ax,\bby);
 
 	\Large
-	\draw[latex-latex] (\ex,\bby+\offset cm) -- node[fill=white] {$3.00$ m}(\fx,\bby+\offset cm);
-	\draw[latex-latex] (\fx,\bby+\offset cm) -- node[fill=white] {$3.00$ m}(\gx,\bby+\offset cm);
-	\draw[latex-latex] (\gx,\bby+\offset cm) -- node[fill=white] {$3.00$ m}(\ax,\bby+\offset cm);
-	\draw[latex-latex] (\rx-\offset cm,\ay) -- node[fill=white] {$2.50$ m}(\rx-\offset cm,\by);
-	\draw[latex-latex] (\rx-\offset cm,\by) -- node[fill=white] {$1.25$ m}(\rx-\offset cm,\cy);
-	\draw[latex-latex] (\rx-\offset cm,\cy) -- node[fill=white] {$1.25$ m}(\rx-\offset cm,\ddy);
+	\draw[latex-latex] (\ex,\bby+\offset cm) -- node[fill=white] {$\qquad\quad $}(\fx,\bby+\offset cm);
+	\draw[latex-latex] (\fx,\bby+\offset cm) -- node[fill=white] {$\qquad\quad $}(\gx,\bby+\offset cm);
+	\draw[latex-latex] (\gx,\bby+\offset cm) -- node[fill=white] {$\qquad\quad $}(\ax,\bby+\offset cm);
+	\draw[latex-latex] (\rx-\offset cm,\ay) -- node[fill=white, inner sep=3mm] {$\qquad\quad $}(\rx-\offset cm,\by);
+	\draw[latex-latex] (\rx-\offset cm,\by) -- node[fill=white, inner sep=3mm] {$\qquad\quad $}(\rx-\offset cm,\cy);
+	\draw[latex-latex] (\rx-\offset cm,\cy) -- node[fill=white, inner sep=3mm] {$\qquad\quad $}(\rx-\offset cm,\ddy);
 	
 
 	% \pgfoonew \BC=new rr(B,C,Burlywood1,black, 0.2)
