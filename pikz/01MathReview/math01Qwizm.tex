@@ -58,25 +58,13 @@
 	\draw ($ (A)+(0, -\offset)$) -- (\ax,\bby);
 
 	\Large
-	\draw[latex-latex] (\ex,\bby+\offset cm) -- node[fill=white] {$\qquad\quad $}(\fx,\bby+\offset cm);
-	\draw[latex-latex] (\fx,\bby+\offset cm) -- node[fill=white] {$\qquad\quad $}(\gx,\bby+\offset cm);
-	\draw[latex-latex] (\gx,\bby+\offset cm) -- node[fill=white] {$\qquad\quad $}(\ax,\bby+\offset cm);
-	\draw[latex-latex] (\rx-\offset cm,\ay) -- node[fill=white, inner sep=3mm] {$\qquad\quad $}(\rx-\offset cm,\by);
-	\draw[latex-latex] (\rx-\offset cm,\by) -- node[fill=white, inner sep=3mm] {$\qquad\quad $}(\rx-\offset cm,\cy);
-	\draw[latex-latex] (\rx-\offset cm,\cy) -- node[fill=white, inner sep=3mm] {$\qquad\quad $}(\rx-\offset cm,\ddy);
+	\draw[latex-latex] (\ex,\bby+\offset cm) -- (\fx,\bby+\offset cm);
+	\draw[latex-latex] (\fx,\bby+\offset cm) -- (\gx,\bby+\offset cm);
+	\draw[latex-latex] (\gx,\bby+\offset cm) -- (\ax,\bby+\offset cm);
+	\draw[latex-latex] (\rx-\offset cm,\ay) -- (\rx-\offset cm,\by);
+	\draw[latex-latex] (\rx-\offset cm,\by) -- (\rx-\offset cm,\cy);
+	\draw[latex-latex] (\rx-\offset cm,\cy) -- (\rx-\offset cm,\ddy);
 	
-
-	% \pgfoonew \BC=new rr(B,C,Burlywood1,black, 0.2)
-	% \pgfoonew \CD=new rr(C,D,Burlywood1,black, 0.2)
-	% \pgfoonew \EF=new rr(E,F,Burlywood1,black, 0.2)
-	% \pgfoonew \FG=new rr(G,F,Burlywood1,black, 0.2)
-	% \pgfoonew \AG=new rr(A,G,Burlywood1,black, 0.2)
-	% \pgfoonew \AB=new rr(A,B,Burlywood1,black, 0.2)
-	% \pgfoonew \CE=new rr(C,E,Burlywood1,black, 0.2)
-	% \pgfoonew \BF=new rr(B,F,Burlywood1,black, 0.2)
-	% \pgfoonew \CF=new rr(C,F,Burlywood1,black, 0.2)
-	% \pgfoonew \BG=new rr(B,G,Burlywood1,black, 0.2)
-
 	\Member{B}{C}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
     \Member{C}{D}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
     \Member{E}{F}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
@@ -86,11 +74,7 @@
 	\Member{C}{E}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
 	\Member{B}{F}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
     \Member{C}{F}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
-    \Member{B}{G}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}
-
-	
-
-	
+    \Member{B}{G}{DarkKhaki}{DarkKhaki!25}{black}{0.35}{0.175}{.25}	
 
 	\shadedraw[ball color=Burlywood4] (A) circle (2.5pt) node[xshift=2mm, yshift=-3mm] {$A$};
 	\shadedraw[ball color=Burlywood4] (B) circle (2.5pt) node[xshift=2.5mm, yshift=3.5mm] {$B$};

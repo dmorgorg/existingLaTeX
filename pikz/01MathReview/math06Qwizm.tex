@@ -21,9 +21,9 @@
 
     \fill[ball color=DarkGreen]  (A)circle(2pt)node[above right]{$A$};
     \fill[ball color=DarkGreen]  (B)circle(2pt)node[below right]{$B$};
-    \fill[ball color=DarkGreen]  (C)circle(2pt)node[below right]{$C$};
+    \fill[ball color=DarkGreen]  (C)circle(2pt)node[above, yshift=0.75mm, xshift=-0.75mm]{$C$};
 
-    \fill[fill=DarkGoldenrod] ($(A)+(0,-3.5)$)--(O)--($(B)+(1,0)$)-- ++(0,1)--(\ox-1cm,\oy+1cm)--(\ox-1cm,\ay-3.5cm)--cycle;
+    \fill[fill=Cornsilk3] ($(A)+(0,-3.5)$)--(O)--($(B)+(1,0)$)-- ++(0,1)--(\ox-1cm,\oy+1cm)--(\ox-1cm,\ay-3.5cm)--cycle;
     \draw ($(A)+(0,-3.5)$)--(O)--($(B)+(1,0)$);
 
     \node[above left] at (O) {$O$};
@@ -31,16 +31,16 @@
     \node[xshift=-0.7cm,yshift=1.5mm] at (C) {$\theta$};
     \node[xshift=0.35cm,yshift=1.75mm] at (C) {$\phi$};
 
-    \shade[left color = SlateGray, right color = SlateGray, middle color = Silver!20](\cx+0.35cm,\cy-1cm)-- ++(0.35,-1)-- ++(-1.4,0)-- ++(0.35,1)--cycle;
+    \shade[left color = Cornsilk4, right color = Cornsilk4, middle color = Cornsilk1](\cx+0.35cm,\cy-1cm)-- ++(0.35,-1)-- ++(-1.4,0)-- ++(0.35,1)--cycle;
     \draw (\cx+0.35cm,\cy-1cm)-- ++(0.35,-1)-- ++(-1.4,0)-- ++(0.35,1)--cycle;
 
     \draw (\ax-2.5mm,\ay)--(\ax-7.5mm,\ay);
     \draw (\ox-2.5mm,\oy)--(\ox-7.5mm,\oy);
-    \draw[Stealth-Stealth] (\ax-5mm,\ay)--node[fill=DarkGoldenrod, sloped]{$\qquad\qquad$ }(\ox-5mm,\oy);
+    \draw[latex-latex] (\ax-5mm,\ay)--(\ox-5mm,\oy);
 
     \draw (\ox,\oy+2.5mm)--(\ox,\oy+7.5mm);
     \draw (\bx,\by+2.5mm)--(\bx,\by+7.5mm);
-    \draw[Stealth-Stealth] (\ox,\oy+5mm)--node[fill=DarkGoldenrod, sloped]{$\qquad\qquad$}(\bx,\by+5mm);
+    \draw[latex-latex] (\ox,\oy+5mm)--(\bx,\by+5mm);
     
     \node at ($(C)+(0,-1.5)$){\large $W$};
 
