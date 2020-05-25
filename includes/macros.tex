@@ -27,8 +27,6 @@
 	\end{minipage}
 }
 
-
-
 % centered minipage with text \raggedright
 %\cmini[width]{content}
 \newcommand{\cmini}[2][0.8]{
@@ -38,6 +36,25 @@
 			#2
 		\end{minipage}
 	\end{center}
+}
+
+\newcommand{\cfig}[2][1]{% centred, scaled graphic
+	\begin{center}
+		\includegraphics[scale=#1]{#2}
+	\end{center}
+}
+% figure with tight border for photos
+% \cfigb[saitMaroon]{borderwidth with unit}{scale}{image}
+\newcommand{\cfigb}[4][structure]{
+	% \usepackage{adjustbox}
+	\setlength{\fboxrule}{1pt}
+	\begin{center}
+		\includegraphics[scale=#3, cframe= #1 #2]{#4}
+	\end{center}
+}
+\newcommand{\imgbox}[3]{
+	% \setlength{\fboxsep}{12pt}
+	\includegraphics[scale=#1, cframe= structure #3]{#2}
 }
 
 % get x and y coordinates from a tikz coordinate

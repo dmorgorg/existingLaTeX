@@ -1,13 +1,12 @@
 % !TEX root = ../../statikz2020/statikz2020.tex
 
-\begin{tikzpicture}
-
-   
+\begin{tikzpicture}   
 
 	\coordinate (O) at (0,0);
 	\coordinate (A) at (0,-2);
 	\coordinate (B) at (4,0);
-	\coordinate (C) at (2,-3);	
+    \coordinate (C) at (2,-3);    	
+	\coordinate (W) at (2,-4);	
 
     \gettikzxy{(A)}{\ax}{\ay}
     \gettikzxy{(B)}{\bx}{\by}
@@ -28,27 +27,25 @@
     \fill[ball color=DarkGreen]  (B)circle(2pt)node[below right]{$B$};
     \fill[ball color=DarkGreen]  (C)circle(2pt)node[below right]{$C$};
 
-    \fill[fill=DarkGoldenrod] ($(A)+(0,-3.5)$)--(O)--($(B)+(1,0)$)-- ++(0,1)--(\ox-1cm,\oy+1cm)--(\ox-1cm,\ay-3.5cm)--cycle;
+    \fill[fill=Cornsilk3] ($(A)+(0,-3.5)$)--(O)--($(B)+(1,0)$)-- ++(0,1)--(\ox-1cm,\oy+1cm)--(\ox-1cm,\ay-3.5cm)--cycle;
     \draw ($(A)+(0,-3.5)$)--(O)--($(B)+(1,0)$);
+
+    \node[above left] at (O) {$O$};
 
     \node[xshift=-0.7cm,yshift=1.5mm] at (C) {$\theta$};
     \node[xshift=0.35cm,yshift=1.75mm] at (C) {$\phi$};
 
-    \node[above left] at (O) {$O$};
-
-
-    \shade[left color = SlateGray, right color = SlateGray, middle color = Silver!20] (\cx+0.35cm,\cy-1cm)-- ++(0.35,-1)-- ++(-1.4,0)-- ++(0.35,1)--cycle;
+    \shade[left color = Cornsilk4, right color = Cornsilk4, middle color = Cornsilk1](\cx+0.35cm,\cy-1cm)-- ++(0.35,-1)-- ++(-1.4,0)-- ++(0.35,1)--cycle;
     \draw (\cx+0.35cm,\cy-1cm)-- ++(0.35,-1)-- ++(-1.4,0)-- ++(0.35,1)--cycle;
 
     \draw (\ax-2.5mm,\ay)--(\ax-7.5mm,\ay);
     \draw (\ox-2.5mm,\oy)--(\ox-7.5mm,\oy);
-    \draw[Stealth-Stealth] (\ax-5mm,\ay)--node[fill=DarkGoldenrod, sloped]{$1.500$ m}(\ox-5mm,\oy);
+    \draw[Stealth-Stealth] (\ax-5mm,\ay)--node[fill=Cornsilk3, sloped]{$1.500$ m}(\ox-5mm,\oy);
 
     \draw (\ox,\oy+2.5mm)--(\ox,\oy+7.5mm);
     \draw (\bx,\by+2.5mm)--(\bx,\by+7.5mm);
-    \draw[Stealth-Stealth] (\ox,\oy+5mm)--node[fill=DarkGoldenrod, sloped]{$3.00$ m}(\bx,\by+5mm);
+    \draw[Stealth-Stealth] (\ox,\oy+5mm)--node[fill=Cornsilk3, sloped]{$3.00$ m}(\bx,\by+5mm);
     
     \node at ($(C)+(0,-1.5)$){\large $W$};
-
 
 \end{tikzpicture}
