@@ -13,8 +13,6 @@
 		\coordinate (right) at (3,0);
 		\coordinate (D) at ($(B)!0.3!(A)$);
 		\coordinate (E) at ($(B)!0.2!(C)$);
-		% \coordinate (F) at ($(B)!.54!(C)$);
-		% \coordinate (G) at ($(B)!.59!(E)$);
 
 		\gettikzxy{(A)}{\ax}{\ay}
 		\gettikzxy{(B)}{\bx}{\by}
@@ -25,10 +23,6 @@
 		\gettikzxy{(bottom)}{\bottomx}{\bottomy}
 		\gettikzxy{(left)}{\leftx}{\lefty}
 		\gettikzxy{(right)}{\rightx}{\righty}
-		% \gettikzxy{(D)}{\ddx}{\ddy}
-        % \gettikzxy{(E)}{\ex}{\ey}
-        % \gettikzxy{(F)}{\fx}{\fy}
-        % \gettikzxy{(G)}{\gx}{\gy}
         
         \PinnedConnection[-90]{A}{DarkGray}{black}{0.4}{0.125}
         \PinnedConnection[90]{C}{DarkGray}{black}{0.4}{0.125}
@@ -48,36 +42,23 @@
             \draw[Latex-Latex] ($(\bx,\by)+(0:1)$)--node[inner sep=0.2mm, sloped, fill=white]{\small $610\,\text{mm}$}($(\bx,\by)+(180:1)$);
         \end{scope}
 
-        % \def\left{-1.25}
-        % \def\leftdim{-1}
-        \def\bottom{-1.75}
-        \def\top{3}
-        % \def\bottomdim{-1.25}
-
-		\filldraw[ball color=LightGray, black, thin] (A) circle (0.75mm);
+        \filldraw[ball color=LightGray, black, thin] (A) circle (0.75mm);
 		\filldraw[ball color=LightGray, black, thin] (C) circle (0.75mm);
 		\filldraw[ball color=LightGray, black, thin, xshift=0.375mm, yshift=1.5mm] (\bx,\by) circle (0.875mm);
 		\fill ($(D)+(0.55mm, 0.25mm)$) circle (0.25mm);
 		\fill($(E)+(-1.1mm, 0.1mm)$) circle (0.25mm);
-		% \fill ($(\fx,\fy)+(146.3: 0.3mm)$) circle (0.25mm);
-		% \fill ($(\gx,\gy)+(63.44: 0.25mm)$) circle (0.25mm);
 
 		\draw (A)  node[black, above, inner sep=5pt] {$A$};
 		\draw (B)  node[black, xshift=1mm, yshift=4mm, inner sep=5pt] {$B$};
 		\draw (C)  node[black, above, inner sep=5pt] {$C$};
 		\draw (D)  node[black, xshift=-2mm, yshift=-2mm, inner sep=5pt] {$D$};
 		\draw (E)  node[black, xshift=0.25mm, yshift=-3mm, inner sep=5pt] {$E$};
-		% \draw (F)  node[black, xshift=2.5mm, yshift=-1mm, inner sep=5pt] {$F$};
-		% \draw (G)  node[black, xshift=-2mm, yshift=-2.25mm, inner sep=5pt] {$G$};
-
 		\draw[very thin] ($(A)+(0.25,0)$)--($(C)+(-0.45,0)$);
 		\draw[very thin] ($(A)+(-0.1875,0)$)--(\leftx,\ay);
 		\draw[very thin] ($(B)+(-0.375,0.15)$)--(\leftx,\by+0.15cm);
 		\draw[very thin] ($(A)+(0,-0.375)$)--(\ax,\bottomy);
 		\draw[very thin] ($(B)+(0.375mm,-0.5mm)$)--(\bx+0.375mm,\bottomy);
-		\draw[very thin] ($(C)+(0,-0.25)$)--(\cx,\bottomy);
-		% \draw[very thin] ($(D)+(0,-0.375)$)--(\ddx,\bottom);
-		% \draw[very thin] ($(B)+(0,-0.375)$)--(\bx,\bottom);		
+		\draw[very thin] ($(C)+(0,-0.25)$)--(\cx,\bottomy);	
 		
 		\draw[latex-latex] (\leftx+0.25cm,\ay)--node[fill=white, inner sep=0.5mm]{$900\,\text{mm}$}(\leftx+0.25cm,\by+0.15cm);
 		\draw[latex-latex] (\ax,\bottomy+0.25cm)--node[fill=white, inner sep=0.5mm]{$600\,\text{mm}$}(\bx+0.375mm,\bottomy+0.25cm);
