@@ -25,7 +25,7 @@
         \begin{scope}[xshift=-0.775cm,yshift=1.875cm]
             \DLDown[-54.462]{(0,2)}{(4.3012,2)}{(0,0)}{LemonChiffon3}{black}{7}{1}{0.75};
         \end{scope}
-        \node[rotate=-54.462] at (3.15,3.15){$1.024\,$kN/m};
+        % \node[rotate=-54.462] at (3.15,3.15){$1.024\,$kN/m};
 
         \PinnedConnection[-90]{A}{LemonChiffon3}{black}{0.5}{0.175}
         \PinnedConnection[-90]{D}{LemonChiffon3}{black}{0.5}{0.175}
@@ -48,8 +48,8 @@
         \draw (\Bx,\By-0.63cm) -- (\Bx, \Py);
         \draw (\Cx,\Cy-0.25cm) -- (\Cx, \Py);
         \draw (\Ax,\Ay-0.3cm) -- (\Ax, \Py);
-        \draw[latex-latex] (\Px+0.5cm,\Dy)--node[fill=white,inner sep=0.5mm]{$3.85\,$m}(\Px+0.5cm,\Ay);
-        \draw[latex-latex] (\Ax,\Py+0.5cm)--node[fill=white,inner sep=0.5mm]{$2.75\,$m}(\Bx,\Py+0.5cm);
-        \draw[latex-latex] (\Bx,\Py+0.5cm)--node[fill=white,inner sep=0.5mm]{$3.30\,$m}(\Cx,\Py+0.5cm);
+        \draw[latex-latex] (\Px+0.5cm,\Dy)--(\Px+0.5cm,\Ay);
+        \draw[latex-latex] (\Ax,\Py+0.5cm)--(\Bx,\Py+0.5cm);
+        \draw[latex-latex] (\Bx,\Py+0.5cm)--(\Cx,\Py+0.5cm);
     \end{tikzpicture}
 }

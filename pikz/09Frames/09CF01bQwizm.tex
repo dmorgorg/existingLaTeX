@@ -40,8 +40,8 @@
 		\draw (B)  node[black, above right, inner sep=5pt] {$B$};
 		\draw (C)  node[black, yshift=4mm, inner sep=5pt] {$C$};
 
-		\draw[ultra thick, Latex-, saitMaroon] ($(B)!0.5!(C)$)--+(35:2)node[above, black]{$10.0\,\text{kN}$ };
-		\draw[ultra thick, latex-, saitMaroon] (\acx, \acy)-- +(180:1.8)node[black, above]{$5.00\,\text{kN}$};
+		\draw[ultra thick, Latex-, saitMaroon] ($(B)!0.5!(C)$)--+(35:2);
+		\draw[ultra thick, latex-, saitMaroon] (\acx, \acy)-- +(180:1.8);
 
 		\draw[very thin] ($(A)+(0.5,0)$)--($(B)+(-0.875,0)$);
 		\draw[very thin] ($(A)+(-0.75,0)$)--(\left,\ay);
@@ -53,13 +53,13 @@
 		\draw[very thin] (\bcmidx, \bcmidy-0.375cm)--(\bcmidx, \bottom);
 		\draw[very thin] (\bcmidx+0.5cm, \bcmidy)-- ++(1.25, 0);
 		
-		\draw[latex-latex] (\ax,\bot)--node[fill=white, inner sep=0.75mm]{$1.500\,\text{m}$}(\cx,\bot);
-		\draw[latex-latex] (\cx,\bot)--node[fill=white, inner sep=0.75mm]{$1.500\,\text{m}$}(\bcmidx,\bot);
-		\draw[latex-latex] (\bcmidx,\bot)--node[fill=white, inner sep=0.75mm]{$1.500\,\text{m}$}(\bx,\bot);
-		\draw[latex-latex] (\ax-1.5cm,\cy)--node[fill=white, inner sep=0.75mm]{$0.750\,\text{m}$}(\ax-1.5cm,\acy);
-		\draw[latex-latex] (\ax-1.5cm,\acy)--node[fill=white, inner sep=0.75mm]{$1.500\,\text{m}$}(\ax-1.5cm,\ay);
+		\draw[latex-latex] (\ax,\bot)--(\cx,\bot);
+		\draw[latex-latex] (\cx,\bot)--(\bcmidx,\bot);
+		\draw[latex-latex] (\bcmidx,\bot)--(\bx,\bot);
+		\draw[latex-latex] (\ax-1.5cm,\cy)--(\ax-1.5cm,\acy);
+		\draw[latex-latex] (\ax-1.5cm,\acy)--(\ax-1.5cm,\ay);
 		
-		\draw[latex-latex] (\bcmidx+1.5cm,\bcmidy)arc(0:35:1.5)node[midway, fill=white, inner sep=.75mm]{$35^\circ$};
+		\draw[latex-latex] (\bcmidx+1.5cm,\bcmidy)arc(0:35:1.5);
 
 	}
 }
