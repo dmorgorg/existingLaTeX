@@ -6,12 +6,12 @@
 
         \large
 
-        \coordinate (A) at (0,1.5);
-        \coordinate (B) at (1,3);
+        \coordinate (A) at (0,2);        
         \coordinate (C) at (3,6);
-        \coordinate (D) at (7,6);
-        \coordinate (E) at (8.875,3);
-        \coordinate (F) at (10.75,0);
+        \coordinate (B) at ($(A)!0.5!(C)$);
+        \coordinate (D) at (7,6);        
+        \coordinate (F) at (12,0);
+        \coordinate (E) at ($(F)!0.375!(D)$);
 
         \gettikzxy{(A)}{\Ax}{\Ay}
         \gettikzxy{(B)}{\Bx}{\By}
@@ -44,7 +44,7 @@
         \def\btmdim{-1.5}
 
         \draw[thin](\Ax-0.5cm,\Ay)--(\left,\Ay);
-        \draw[thin](\Bx-0.5cm,\By)--(\left,\By);
+        % \draw[thin](\Bx-0.5cm,\By)--(\left,\By);
         \draw[thin](\Cx-0.5cm,\Cy)--(\left,\Cy);
         \draw[thin](\Fx-0.75cm,\Fy)--(\left,\Fy);
         \draw[thin](\Ax,\Ay-0.75cm)--(\Ax,\btm);
@@ -53,18 +53,25 @@
         \draw[thin](\Dx,\Dy-0.75cm)--(\Dx,\btm);
         \draw[thin](\Ex,\Ey-0.75cm)--(\Ex,\btm);
         \draw[thin](\Fx,\Fy-0.75cm)--(\Fx,\btm);
+        \draw[thin](\Ex-0.75cm,\Ey)-- +(-1.75,0);
+
+        \node at (\Ex-2.25cm,\Ey+0.21cm){$\theta$};
+
+        \draw [latex-] ($(E)+(168.53:2.25)$)arc(168.53:148:2.25);
+        \draw [latex-] ($(E)+(180:2.25)$)arc(180:200:2.25);
+        
 
         \filldraw[ball color=Seashell3,black] (A) circle (1mm)node[xshift=0.375cm, yshift=-0.05cm]{$A$};
-        \filldraw[ball color=Seashell3,black] (B) circle (1mm)node[xshift=0.25cm, yshift=-0.25cm]{$B$};
+        \filldraw[ball color=Seashell3,black] (B) circle (1mm)node[xshift=0.25cm, yshift=-0.325cm]{$B$};
         \filldraw[ball color=Seashell3,black] (C) circle (1mm)node[xshift=0.2cm, yshift=-0.375cm]{$C$};
         \filldraw[ball color=Seashell3,black] (D) circle (1mm)node[xshift=-0.275cm, yshift=-0.375cm]{$D$};
         \filldraw[ball color=Seashell3,black] (E) circle (1mm)node[xshift=-0.375cm, yshift=-0.25cm]{$E$};
-        \filldraw[ball color=Seashell3,black] (F) circle (1mm)node[xshift=-0.45cm]{$F$};
+        \filldraw[ball color=Seashell3,black] (F) circle (1mm)node[xshift=-0.55cm]{$F$};
 
         \small
         \draw[latex-latex] (\leftdim,\Fy)--(\leftdim,\Ay);
-        \draw[latex-latex] (\leftdim,\Ay)--(\leftdim,\By);
-        \draw[latex-latex] (\leftdim,\By)--(\leftdim,\Cy);
+        \draw[latex-latex] (\leftdim,\Ay)--(\leftdim,\Cy);
+        % \draw[latex-latex] (\leftdim,\By)--(\leftdim,\Cy);
         \draw[latex-latex] (\Ax,\btmdim)--(\Bx,\btmdim);
         \draw[latex-latex] (\Bx,\btmdim)--(\Cx,\btmdim);
         \draw[latex-latex] (\Cx,\btmdim)--(\Dx,\btmdim);

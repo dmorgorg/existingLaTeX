@@ -40,16 +40,18 @@
         \fill[Cornsilk3]($(C)+(-48.367:0.5)+(41.633:0.875)$) --++(-138.37:1.75)--++(-48.367:0.5)--+(41.633:1.75);
         \draw[black]($(C)+(-48.367:0.5)+(41.633:0.875)$) --+ (-138.37:1.75);
 
-        \draw[ball color=Bisque4] (A) circle (0.0875cm)node[yshift=0.375cm,xshift=-0.25cm]{$A$};
-        \draw[ball color=Bisque4] (B) circle (0.125cm)node[yshift=0.375cm]{$B$};
-        \draw[ball color=Bisque4] (C) circle (0.0875cm)node[xshift=0.375cm,yshift=0.25cm]{$C$};
+        \Large
+        \draw[ball color=Bisque4] (A) circle (0.0875cm)node[yshift=0.375cm,xshift=-0.375cm]{$A$};
+        \draw[ball color=Bisque4] (B) circle (0.125cm)node[yshift=0.5cm]{$B$};
+        \draw[ball color=Bisque4] (C) circle (0.0875cm)node[xshift=0.375cm,yshift=0.375cm]{$C$};
 
         % \pgfoonew \DE=new rrect(D,E,Cornsilk3,Cornsilk3,black,0.35,0.1,0,0.125)
         \Member{D}{E}{Cornsilk3}{Cornsilk3}{black}{0.35}{0.05}{0.125}
+        % \Memberr{5}{7}{3}{1}{Cornsilk3}{Cornsilk3}{black}{0.35}{0.05}{0.125}
 
         \foreach \x in {5,7,...,13}
         {
-        \draw[ultra thick, Cornsilk4!50!black] (\x, -3*\x*\x/32+3*\x/2)--(\x, -2);
+            \draw[ultra thick, Cornsilk4!30!black] (\x, -3*\x*\x/32+3*\x/2)--(\x, -2);
             \filldraw [ball color= Cornsilk4, very thin] (\x, -3*\x*\x/32+3*\x/2) circle (2pt);
             \filldraw [ball color= Cornsilk4, very thin] (\x, -2) circle (2pt);
         }
