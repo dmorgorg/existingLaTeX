@@ -106,32 +106,35 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Note that use of verbatim within Beamer needs fragile setting for frame
 % Also, verbatim environment cannot be inside curly braces, {\begin{verbatim}... blows up?
-% \begin{frame}[fragile]{Tikz Components :: Member}
+\begin{frame}[fragile]{Tikz Components :: Member}
 
-%   \small
-%   \begin{verbatim}
-%      \Member{startpt}{endpt}{outer}{inner}{stroke}{height}{radius}{line width}
-%    \end{verbatim}
-%   \parb
+  \small
+  \begin{verbatim}
+  \Member{startpt}{endpt}{outer}{inner}{stroke}{height}{radius}{line width}
+   \end{verbatim}
+  \parb
+  \vspace{2cm}
  
-%   % \resizebox{0.25\textwidth}{!}{%
-%   \begin{tikzpicture}
-%     \coordinate (A) at (0,0);
-%     \coordinate (B) at (3,3);
-%     \coordinate (C) at (8,0);
-%     \coordinate (D) at (6,-0.5);
-%     \coordinate (E) at (2,0.5);
-%     \Member{A}{B}{SlateGray}{SlateGray!25!white}{black}{0.35}{0.175}{.25}
-%     \Member{A}{E}{DarkMagenta}{DarkMagenta!25!white}{black}{0.35}{0.175}{.25}
-%     \Member{E}{B}{DarkRed}{DarkRed!25!white}{black}{0.35}{0.175}{.25}
-%     \Member{E}{D}{DarkOliveGreen}{DarkOliveGreen!25!white}{black}{0.35}{0.175}{.25}
-%     \Member{D}{B}{SteelBlue}{SteelBlue!25!white}{black}{0.35}{0.175}{.25}
-%     \Member{C}{B}{DarkKhaki}{DarkKhaki!25!white}{black}{0.35}{0.175}{.25}
-%     \Member{D}{C}{Goldenrod}{Goldenrod!25!white}{black}{0.35}{0.175}{.25}
-%   \end{tikzpicture}
-%   % }
+  \resizebox{0.75\textwidth}{!}{%
+    \begin{tikzpicture}
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (3,3);
+      \coordinate (C) at (8,0);
+      \coordinate (D) at (6,-0.5);
+      \coordinate (E) at (2,0.5);
+      \Member{A}{B}{SlateGray}{SlateGray!25!white}{black}{0.35}{0.175}{.25}
+      \Member{A}{E}{DarkMagenta}{DarkMagenta!25!white}{black}{0.35}{0.175}{.25}
+      \Member{E}{B}{DarkRed}{DarkRed!25!white}{black}{0.35}{0.175}{.25}
+      \Member{E}{D}{DarkOliveGreen}{DarkOliveGreen!25!white}{black}{0.35}{0.175}{.25}
+      \Member{D}{B}{SteelBlue}{SteelBlue!25!white}{black}{0.35}{0.175}{.25}
+      \Member{C}{B}{DarkKhaki}{DarkKhaki!25!white}{black}{0.35}{0.175}{.25}
+      \Member{D}{C}{Goldenrod}{Goldenrod!25!white}{black}{0.35}{0.175}{.25}
+      \fill[white] (-1,0) circle (0.1mm);
+      \fill[white] (9,0) circle (0.1mm);
+    \end{tikzpicture}
+  }
 
-% \end{frame}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -158,607 +161,607 @@
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}[fragile]{Tikz Components :: RollerOne}
+\begin{frame}[fragile]{Tikz Components :: RollerOne}
 
-%   \footnotesize
-%   \begin{verbatim}
-%     \RollerOne[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
-%   \end{verbatim}
+  \footnotesize
+  \begin{verbatim}
+    \RollerOne[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
+  \end{verbatim}
 
-%   \vspace{1cm}
+  \vspace{1cm}
 
-%   \tikz{
-%     \coordinate (A) at (0,0);
-%     \RollerOne{A}{DarkKhaki}{Black}{2}{0.5}
-%   }
+  \tikz{
+    \coordinate (A) at (0,0);
+    \RollerOne{A}{DarkKhaki}{Black}{2}{0.5}
+  }
 
-% \end{frame}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}[fragile]{Tikz Components :: RollerThree}
+\begin{frame}[fragile]{Tikz Components :: RollerThree}
 
-%   \footnotesize
-%   \begin{verbatim}
-%     \RollerThree[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
-%   \end{verbatim}
+  \footnotesize
+  \begin{verbatim}
+    \RollerThree[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
+  \end{verbatim}
 
-%   \vspace{1cm}
+  \vspace{1cm}
 
-%   \tikz{
-%     \coordinate (A) at (0,0);
-%     \RollerThree{A}{DarkKhaki}{Black}{2}{0.5}
-%   }
+  \tikz{
+    \coordinate (A) at (0,0);
+    \RollerThree{A}{DarkKhaki}{Black}{2}{0.5}
+  }
 
-% \end{frame}
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}[fragile]{Tikz Components :: RollerOnly}
+\begin{frame}[fragile]{Tikz Components :: RollerOnly}
 
-%   \footnotesize
-%   \begin{verbatim}
-%     \RollerOnly[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
-%   \end{verbatim}
+  \footnotesize
+  \begin{verbatim}
+    \RollerOnly[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
+  \end{verbatim}
 
-%   \vspace{1cm}
+  \vspace{1cm}
 
-%   \tikz{
-%     \coordinate (A) at (0,0);
-%     \RollerOnly{A}{DarkKhaki}{Black}{2}{0.5}
-%   }
+  \tikz{
+    \coordinate (A) at (0,0);
+    \RollerOnly{A}{DarkKhaki}{Black}{2}{0.5}
+  }
 
-% \end{frame}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[fragile]{Tikz Components :: Rocker}
+
+  \footnotesize
+  \begin{verbatim}
+    \Rocker[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
+  \end{verbatim}
+
+  \vspace{1cm}
+
+  \tikz{
+    \coordinate (A) at (0,0);
+    % \Rocker[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
+    \Rocker{A}{DarkKhaki}{Black}{2}{0.5}
+  }
+
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}[fragile]{Tikz Components :: Rocker}
+\begin{frame}[fragile]{Tikz Components :: EyeConnection}
 
-%   \footnotesize
-%   \begin{verbatim}
-%     \Rocker[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
-%   \end{verbatim}
+  \footnotesize
+  \begin{verbatim}
+    \EyeConnection[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
+  \end{verbatim}
 
-%   \vspace{1cm}
+  \vspace{1cm}
 
-%   \tikz{
-%     \coordinate (A) at (0,0);
-%     % \Rocker[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
-%     \Rocker{A}{DarkKhaki}{Black}{2}{0.5}
-%   }
+  \tikz{
+    \coordinate (A) at (0,0);
+    \EyeConnection{A}{DarkKhaki}{Black}{2}{0.5}
+  }
 
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}[fragile]{Tikz Components :: EyeConnection}
+\begin{frame}[fragile]{Tikz Components :: EyeConnectionB}
 
-%   \footnotesize
-%   \begin{verbatim}
-%     \EyeConnection[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
-%   \end{verbatim}
+  \small
+  \begin{verbatim}
+    \EyeConnectionB[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
+  \end{verbatim}
 
-%   \vspace{1cm}
+  \vspace{1cm}
 
-%   \tikz{
-%     \coordinate (A) at (0,0);
-%     \EyeConnection{A}{DarkKhaki}{Black}{2}{0.5}
-%   }
+  \tikz{
+    \coordinate (A) at (0,0);
+    \EyeConnectionB{A}{DarkKhaki}{Black}{2}{0.5}
+  }
 
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}[fragile]{Tikz Components :: EyeConnectionB}
+\begin{frame}[fragile]{Tikz Components :: DLDown}
 
-%   \small
-%   \begin{verbatim}
-%     \EyeConnectionB[rotate=0]{coordinate}{fill}{draw}{scale}{line width}
-%   \end{verbatim}
+  \footnotesize
+  \begin{verbatim}
+    \DLDown[rotate]{tl}{tr}{b}{fill}{draw}{spaces}{scale}{lineWidth}
 
-%   \vspace{1cm}
+    \DLDown[25]{A}{B}{C}{SlateGray3}{SlateGray4!75!black}{5}{1}{0.375}
+  \end{verbatim}
 
-%   \tikz{
-%     \coordinate (A) at (0,0);
-%     \EyeConnectionB{A}{DarkKhaki}{Black}{2}{0.5}
-%   }
+  \tikz{
+    \coordinate (A) at (0,0);
+		\coordinate (B) at (4,3);
+		\coordinate (C) at (0,-1);
+    % \DLDown[rotate]{tl}{tr}{b}{fill}{draw}{spaces}{scale}{lineWidth}
+    \DLDown[25]{A}{B}{C}{SlateGray3}{SlateGray4!75!black}{5}{1}{0.375}
+  }
 
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}[fragile]{Tikz Components :: DLDown}
+\begin{frame}[fragile]{Tikz Components :: DLUp}
 
-%   \footnotesize
-%   \begin{verbatim}
-%     \DLDown[rotate]{tl}{tr}{b}{fill}{draw}{spaces}{scale}{lineWidth}
+  \footnotesize
+  \begin{verbatim}
+    \DLUp[rotate]{tl}{tr}{b}{fill}{draw}{spaces}{scale}{lineWidth}
 
-%     \DLDown[25]{A}{B}{C}{SlateGray3}{SlateGray4!75!black}{5}{1}{0.375}
-%   \end{verbatim}
+    \DLUp[25]{A}{B}{C}{SlateGray3}{SlateGray4!75!black}{5}{1}{0.375}
+  \end{verbatim}
 
-%   \tikz{
-%     \coordinate (A) at (0,0);
-% 		\coordinate (B) at (4,3);
-% 		\coordinate (C) at (0,-1);
-%     % \DLDown[rotate]{tl}{tr}{b}{fill}{draw}{spaces}{scale}{lineWidth}
-%     \DLDown[25]{A}{B}{C}{SlateGray3}{SlateGray4!75!black}{5}{1}{0.375}
-%   }
+  \tikz{
+    \coordinate (A) at (0,0);
+		\coordinate (B) at (4,3);
+		\coordinate (C) at (0,-1);
+    % \DLUp[rotate]{tl}{tr}{b}{fill}{draw}{spaces}{scale}{lineWidth}
+    \DLUp[25]{A}{B}{C}{SlateGray3}{SlateGray4!75!black}{5}{1}{0.375}
+  }
 
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}[fragile]{Tikz Components :: DLUp}
-
-%   \footnotesize
-%   \begin{verbatim}
-%     \DLUp[rotate]{tl}{tr}{b}{fill}{draw}{spaces}{scale}{lineWidth}
-
-%     \DLUp[25]{A}{B}{C}{SlateGray3}{SlateGray4!75!black}{5}{1}{0.375}
-%   \end{verbatim}
-
-%   \tikz{
-%     \coordinate (A) at (0,0);
-% 		\coordinate (B) at (4,3);
-% 		\coordinate (C) at (0,-1);
-%     % \DLUp[rotate]{tl}{tr}{b}{fill}{draw}{spaces}{scale}{lineWidth}
-%     \DLUp[25]{A}{B}{C}{SlateGray3}{SlateGray4!75!black}{5}{1}{0.375}
-%   }
-
-% \end{frame}
+\end{frame}
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \section{Math Review}
+\section{Math Review}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/00MathReview/00MR01}
-%   \resizebox{0.75\textwidth}{!}{%
-%     \input{../pikz/00MathReview/00MR01}
-%   }
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/00MathReview/00MR01Qwizm}
-%     \resizebox{0.75\textwidth}{!}{%
-%     \input{../pikz/00MathReview/00MR01Qwizm}
-%   }
-% \end{frame}
+\begin{frame}{pikz/00MathReview/00MR01}
+  \resizebox{0.75\textwidth}{!}{%
+    \input{../pikz/00MathReview/00MR01}
+  }
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/00MathReview/00MR02}
-%   \resizebox{0.75\textwidth}{!}{%
-%     \input{../pikz/00MathReview/00MR02}
-%   }
-% \end{frame}
+\begin{frame}{pikz/00MathReview/00MR01Qwizm}
+    \resizebox{0.75\textwidth}{!}{%
+    \input{../pikz/00MathReview/00MR01Qwizm}
+  }
+\end{frame}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \begin{frame}{pikz/00MathReview/00MR02Qwizm}
-%   \resizebox{0.75\textwidth}{!}{%
-%   \input{../pikz/00MathReview/00MR02Qwizm}
-% }
-% \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{frame}{pikz/00MathReview/00MR02}
+  \resizebox{0.75\textwidth}{!}{%
+    \input{../pikz/00MathReview/00MR02}
+  }
+\end{frame}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{pikz/00MathReview/00MR02Qwizm}
+  \resizebox{0.75\textwidth}{!}{%
+  \input{../pikz/00MathReview/00MR02Qwizm}
+}
+\end{frame}
 
-% \begin{frame}{pikz/00MathReview/00MR03}  
-%   \input{../pikz/00MathReview/00MR03} 
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/00MathReview/00MR03Qwizm}
-%   \input{../pikz/00MathReview/00MR03Qwizm}
-% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/00MathReview/00MR04}
-%   \resizebox{0.5\textwidth}{!}{%
-%     \input{../pikz/00MathReview/00MR04}
-%   }
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/00MathReview/00MR04Qwizm}
-%   \input{../pikz/00MathReview/00MR04Qwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/00MathReview/00MR05}
-%   \input{../pikz/00MathReview/00MR05}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/00MathReview/00MR05Qwizm}
-%   \input{../pikz/00MathReview/00MR05Qwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/00MathReview/00MR06}
-%   \input{../pikz/00MathReview/00MR06}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/00MathReview/00MR06Qwizm}
-%   \input{../pikz/00MathReview/00MR06Qwizm}
-% \end{frame}
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \section{Forces \& Components}
+\begin{frame}{pikz/00MathReview/00MR03}  
+  \input{../pikz/00MathReview/00MR03} 
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/00MathReview/00MR03Qwizm}
+  \input{../pikz/00MathReview/00MR03Qwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/00MathReview/00MR04}
+  \resizebox{0.5\textwidth}{!}{%
+    \input{../pikz/00MathReview/00MR04}
+  }
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/00MathReview/00MR04Qwizm}
+  \input{../pikz/00MathReview/00MR04Qwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/00MathReview/00MR05}
+  \input{../pikz/00MathReview/00MR05}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/00MathReview/00MR05Qwizm}
+  \input{../pikz/00MathReview/00MR05Qwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/00MathReview/00MR06}
+  \input{../pikz/00MathReview/00MR06}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/00MathReview/00MR06Qwizm}
+  \input{../pikz/00MathReview/00MR06Qwizm}
+\end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \section{Misc Bits}
+\section{Forces \& Components}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/misc/penrose}
-%   \input{../pikz/misc/penrose}
-% \end{frame}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Misc Bits}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/misc/penrose}
+  \input{../pikz/misc/penrose}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % \begin{frame}{pikz/misc/penstar}
 %   \input{../pikz/misc/penstar}
 % \end{frame}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \section{Frames \& Machines}
+\section{Frames \& Machines}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/09Frames/09CF01a}
-%   \input{../pikz/09Frames/09CF01a}
-% \end{frame}
+\begin{frame}{pikz/09Frames/09CF01a}
+  \input{../pikz/09Frames/09CF01a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF01aQwizm}
+  \input{../pikz/09Frames/09CF01aQwizm}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/09Frames/09CF01aQwizm}
-%   \input{../pikz/09Frames/09CF01aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF01b}
-%   \input{../pikz/09Frames/09CF01b}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF01bQwizm}
-%   \input{../pikz/09Frames/09CF01bQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF01c}
-%   \input{../pikz/09Frames/09CF01c}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF01cQwizm}
-%   \input{../pikz/09Frames/09CF01cQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF02a}
-%   \input{../pikz/09Frames/09CF02a}
-% \end{frame}
+\begin{frame}{pikz/09Frames/09CF01b}
+  \input{../pikz/09Frames/09CF01b}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/09Frames/09CF02aQwizm}
-%   \input{../pikz/09Frames/09CF02aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF02b}
-%   \input{../pikz/09Frames/09CF02b}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF02bQwizm}
-%   \input{../pikz/09Frames/09CF02bQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF02c}
-%   \input{../pikz/09Frames/09CF02c}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF02cQwizm}
-%   \input{../pikz/09Frames/09CF02cQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF03a}
-%   \input{../pikz/09Frames/09CF03a}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF03aQwizm}
-%   \input{../pikz/09Frames/09CF03aQwizm}
-% \end{frame}
+\begin{frame}{pikz/09Frames/09CF01bQwizm}
+  \input{../pikz/09Frames/09CF01bQwizm}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/09Frames/09CF03b}
-%   \input{../pikz/09Frames/09CF03b}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF03bQwizm}
-%   \input{../pikz/09Frames/09CF03bQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF04a}
-%   \input{../pikz/09Frames/09CF04a}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF04aQwizm}
-%   \input{../pikz/09Frames/09CF04aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF04b}  
-%   \input{../pikz/09Frames/09CF04b}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF04bQwizm}  
-%   \input{../pikz/09Frames/09CF04bQwizm}
-% \end{frame}
+\begin{frame}{pikz/09Frames/09CF01c}
+  \input{../pikz/09Frames/09CF01c}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/09Frames/09CF05a}
-%   \input{../pikz/09Frames/09CF05a}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF05aQwizm}
-%   \input{../pikz/09Frames/09CF05aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF05b}
-%   \input{../pikz/09Frames/09CF05b}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF05bQwizm}
-%   \input{../pikz/09Frames/09CF05bQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF06a}
-%   \input{../pikz/09Frames/09CF06a}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF06aQwizm}
-%   \input{../pikz/09Frames/09CF06aQwizm}
-% \end{frame}
+\begin{frame}{pikz/09Frames/09CF01cQwizm}
+  \input{../pikz/09Frames/09CF01cQwizm}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/09Frames/09CF06b}
-%   \input{../pikz/09Frames/09CF06b}
-% \end{frame}
+\begin{frame}{pikz/09Frames/09CF02a}
+  \input{../pikz/09Frames/09CF02a}
+\end{frame}
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/09Frames/09CF06bQwizm}
-%   \input{../pikz/09Frames/09CF06bQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF07a}
-%   \input{../pikz/09Frames/09CF07a}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF07aQwizm}
-%   \input{../pikz/09Frames/09CF07aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF07b}
-%   \input{../pikz/09Frames/09CF07b}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF07bQwizm}
-%   \input{../pikz/09Frames/09CF07bQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF08a}
-%   \input{../pikz/09Frames/09CF08a}
-% \end{frame}
+\begin{frame}{pikz/09Frames/09CF02aQwizm}
+  \input{../pikz/09Frames/09CF02aQwizm}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/09Frames/09CF08aQwizm}
-%   \input{../pikz/09Frames/09CF08aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF09a}
-%   \input{../pikz/09Frames/09CF09a.tex}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF09aQwizm}
-%   \input{../pikz/09Frames/09CF09aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF10a}
-%   \input{../pikz/09Frames/09CF10a}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF10aQwizm}
-%   \input{../pikz/09Frames/09CF10aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF10b}
-%   \input{../pikz/09Frames/09CF10b}
-% \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF10bQwizm}
-%   \input{../pikz/09Frames/09CF10bQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF11a}
-%   \input{../pikz/09Frames/09CF11a}
-% \end{frame}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF11aQwizm}
-%   \input{../pikz/09Frames/09CF11aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF12a}
-%   \input{../pikz/09Frames/09CF12a}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF12aQwizm}
-%   \input{../pikz/09Frames/09CF12aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF12b}
-%   \input{../pikz/09Frames/09CF12b}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF12bQwizm}
-%   \input{../pikz/09Frames/09CF12bQwizm}
-% \end{frame}
+\begin{frame}{pikz/09Frames/09CF02b}
+  \input{../pikz/09Frames/09CF02b}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/09Frames/09CF13a}
-%   \input{../pikz/09Frames/09CF13a}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF13aQwizm}
-%   \input{../pikz/09Frames/09CF13aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF14a}
-%   \input{../pikz/09Frames/09CF14a}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF14aQwizm}
-%   \input{../pikz/09Frames/09CF14aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF15a}
-%   \input{../pikz/09Frames/09CF15a}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF15aQwizm}
-%   \input{../pikz/09Frames/09CF15aQwizm}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF16a}
-%   \input{../pikz/09Frames/09CF16a}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF16aQwizm}
-%   \input{../pikz/09Frames/09CF16aQwizm}
-% \end{frame}
+\begin{frame}{pikz/09Frames/09CF02bQwizm}
+  \input{../pikz/09Frames/09CF02bQwizm}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% \begin{frame}{pikz/09Frames/09CF17a}
-%   \input{../pikz/09Frames/09CF17a}
-% \end{frame}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/09Frames/09CF17aQwizm}
-%   \input{../pikz/09Frames/09CF17aQwizm}
-% \end{frame}
+\begin{frame}{pikz/09Frames/09CF02c}
+  \input{../pikz/09Frames/09CF02c}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF02cQwizm}
+  \input{../pikz/09Frames/09CF02cQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF03a}
+  \input{../pikz/09Frames/09CF03a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF03aQwizm}
+  \input{../pikz/09Frames/09CF03aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF03b}
+  \input{../pikz/09Frames/09CF03b}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF03bQwizm}
+  \input{../pikz/09Frames/09CF03bQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF04a}
+  \input{../pikz/09Frames/09CF04a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF04aQwizm}
+  \input{../pikz/09Frames/09CF04aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF04b}  
+  \input{../pikz/09Frames/09CF04b}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF04bQwizm}  
+  \input{../pikz/09Frames/09CF04bQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF05a}
+  \input{../pikz/09Frames/09CF05a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF05aQwizm}
+  \input{../pikz/09Frames/09CF05aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF05b}
+  \input{../pikz/09Frames/09CF05b}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF05bQwizm}
+  \input{../pikz/09Frames/09CF05bQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF06a}
+  \input{../pikz/09Frames/09CF06a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF06aQwizm}
+  \input{../pikz/09Frames/09CF06aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF06b}
+  \input{../pikz/09Frames/09CF06b}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF06bQwizm}
+  \input{../pikz/09Frames/09CF06bQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF07a}
+  \input{../pikz/09Frames/09CF07a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF07aQwizm}
+  \input{../pikz/09Frames/09CF07aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF07b}
+  \input{../pikz/09Frames/09CF07b}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF07bQwizm}
+  \input{../pikz/09Frames/09CF07bQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF08a}
+  \input{../pikz/09Frames/09CF08a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF08aQwizm}
+  \input{../pikz/09Frames/09CF08aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF09a}
+  \input{../pikz/09Frames/09CF09a.tex}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF09aQwizm}
+  \input{../pikz/09Frames/09CF09aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF10a}
+  \input{../pikz/09Frames/09CF10a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF10aQwizm}
+  \input{../pikz/09Frames/09CF10aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF10b}
+  \input{../pikz/09Frames/09CF10b}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF10bQwizm}
+  \input{../pikz/09Frames/09CF10bQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF11a}
+  \input{../pikz/09Frames/09CF11a}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF11aQwizm}
+  \input{../pikz/09Frames/09CF11aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF12a}
+  \input{../pikz/09Frames/09CF12a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF12aQwizm}
+  \input{../pikz/09Frames/09CF12aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF12b}
+  \input{../pikz/09Frames/09CF12b}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF12bQwizm}
+  \input{../pikz/09Frames/09CF12bQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF13a}
+  \input{../pikz/09Frames/09CF13a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF13aQwizm}
+  \input{../pikz/09Frames/09CF13aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF14a}
+  \input{../pikz/09Frames/09CF14a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF14aQwizm}
+  \input{../pikz/09Frames/09CF14aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF15a}
+  \input{../pikz/09Frames/09CF15a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF15aQwizm}
+  \input{../pikz/09Frames/09CF15aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF16a}
+  \input{../pikz/09Frames/09CF16a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF16aQwizm}
+  \input{../pikz/09Frames/09CF16aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF17a}
+  \input{../pikz/09Frames/09CF17a}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/09Frames/09CF17aQwizm}
+  \input{../pikz/09Frames/09CF17aQwizm}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
