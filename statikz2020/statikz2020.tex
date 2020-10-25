@@ -1,3 +1,5 @@
+
+% following causes error in chktex linter when on file first line
 %!TEX option = -enable-write18
 
 \documentclass[9pt,xcolor={svgnames, x11names}]{beamer}
@@ -12,8 +14,8 @@
 % \usepackage{hyperref} % hyperref usually loaded last but automatically be Beamer
 \hypersetup{
   colorlinks,
-  citecolor=red,
-  filecolor=orange,
+  % citecolor=red,
+  % filecolor=orange,
   linkcolor=staticsstructurecolor, % table of contents
   urlcolor=staticsstructurecolor
 }
@@ -47,6 +49,14 @@
 \usetheme{Antibes}
 \usecolortheme[named=staticsstructurecolor]{structure}
 % \setbeamertemplate{items}[triangle]
+% \setbeamertemplate{subsection in toc}[subsections numbered]
+
+% \setbeamertemplate{section in toc}{%
+    % *  \inserttocsection \par}
+
+% \setbeamertemplate{subsection in toc}{
+%     -- \inserttocsubsection \par}
+
 \setbeamertemplate{blocks}[rounded][shadow=false]
 \setbeamertemplate{headline}{\vspace{.1cm}}
 \setbeamertemplate{navigation symbols}{} % empty braces suppresses all navigation symbols
@@ -64,10 +74,12 @@
 }
 \addtobeamertemplate{footline}{\hypersetup{linkcolor=black}}{}
 \setbeamertemplate{navigation symbols}{} % empty braces suppresses all navigation symbols
-\setbeamercolor{frametitle}{fg=white}
+% \setbeamercolor{frametitle}{fg=white}
+\setbeamertemplate{section in toc shaded}[default][50]
+% \setbeamertemplate{subsection in toc}[subsections numbered]
 
 \input{../includes/macros}
-\input{../includes/definedColors}
+   \input{../includes/definedColors}
 \input{../pikz/components/Member}
 \input{../pikz/components/Rocker}
 \input{../pikz/components/RollerOne}
@@ -79,11 +91,13 @@
 \input{../pikz/components/DLDown}
 \input{../pikz/components/DLUp}
 
+\setcounter{tocdepth}{5}
+
 
 % various hacks to get around (apparent?) Beamer titlepage constraints
 \title[\color{black} Statikz\textcolor{Maroon}{2020}]{\Huge Statikz}
 \subtitle{} % i.e., a blank line
-\institute{\small Source code at: {\footnotesize\url{https://github.com/dmorgorg/nuLaTeX/blob/master/statikz2020/statikz.pdf}}}
+\institute{\small Source code at: \lb{\footnotesize\url{https://github.com/dmorgorg/nuLaTeX/blob/master/statikz2020/}}}
 \author{} % another blanky
 \date{\small Last updated on \today}
 
@@ -114,7 +128,7 @@
    \end{verbatim}
   \parb
   \vspace{2cm}
- 
+
   \resizebox{0.75\textwidth}{!}{%
     \begin{tikzpicture}
       \coordinate (A) at (0,0);
@@ -275,8 +289,8 @@
 
   \tikz{
     \coordinate (A) at (0,0);
-		\coordinate (B) at (4,3);
-		\coordinate (C) at (0,-1);
+    \coordinate (B) at (4,3);
+    \coordinate (C) at (0,-1);
     % \DLDown[rotate]{tl}{tr}{b}{fill}{draw}{spaces}{scale}{lineWidth}
     \DLDown[25]{A}{B}{C}{SlateGray3}{SlateGray4!75!black}{5}{1}{0.375}
   }
@@ -295,8 +309,8 @@
 
   \tikz{
     \coordinate (A) at (0,0);
-		\coordinate (B) at (4,3);
-		\coordinate (C) at (0,-1);
+    \coordinate (B) at (4,3);
+    \coordinate (C) at (0,-1);
     % \DLUp[rotate]{tl}{tr}{b}{fill}{draw}{spaces}{scale}{lineWidth}
     \DLUp[25]{A}{B}{C}{SlateGray3}{SlateGray4!75!black}{5}{1}{0.375}
   }
@@ -308,89 +322,106 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\section{Misc Bits}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{pikz/misc/penrose}
+  \input{../pikz/misc/penrose}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{frame}{pikz/misc/penstar}
+%   \input{../pikz/misc/penstar}
+% \end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Math Review}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/00MathReview/00MR01}
+\begin{frame}{pikz/01MathReview/01MR01}
   \resizebox{0.75\textwidth}{!}{%
-    \input{../pikz/00MathReview/00MR01}
+    \input{../pikz/01MathReview/01MR01}
   }
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/00MathReview/00MR01Qwizm}
-    \resizebox{0.75\textwidth}{!}{%
-    \input{../pikz/00MathReview/00MR01Qwizm}
+\begin{frame}{pikz/01MathReview/01MR01Qwizm}
+  \resizebox{0.75\textwidth}{!}{%
+    \input{../pikz/01MathReview/01MR01Qwizm}
   }
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/00MathReview/00MR02}
+\begin{frame}{pikz/01MathReview/01MR02}
   \resizebox{0.75\textwidth}{!}{%
-    \input{../pikz/00MathReview/00MR02}
+    \input{../pikz/01MathReview/01MR02}
   }
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{pikz/00MathReview/00MR02Qwizm}
+\begin{frame}{pikz/01MathReview/01MR02Qwizm}
   \resizebox{0.75\textwidth}{!}{%
-  \input{../pikz/00MathReview/00MR02Qwizm}
-}
+    \input{../pikz/01MathReview/01MR02Qwizm}
+  }
 \end{frame}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/00MathReview/00MR03}  
-  \input{../pikz/00MathReview/00MR03} 
+\begin{frame}{pikz/01MathReview/01MR03}
+  \input{../pikz/01MathReview/01MR03}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/00MathReview/00MR03Qwizm}
-  \input{../pikz/00MathReview/00MR03Qwizm}
+\begin{frame}{pikz/01MathReview/01MR03Qwizm}
+  \input{../pikz/01MathReview/01MR03Qwizm}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/00MathReview/00MR04}
+\begin{frame}{pikz/01MathReview/01MR04}
   \resizebox{0.5\textwidth}{!}{%
-    \input{../pikz/00MathReview/00MR04}
+    \input{../pikz/01MathReview/01MR04}
   }
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/00MathReview/00MR04Qwizm}
-  \input{../pikz/00MathReview/00MR04Qwizm}
+\begin{frame}{pikz/01MathReview/01MR04Qwizm}
+  \input{../pikz/01MathReview/01MR04Qwizm}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/00MathReview/00MR05}
-  \input{../pikz/00MathReview/00MR05}
+\begin{frame}{pikz/01MathReview/01MR05}
+  \input{../pikz/01MathReview/01MR05}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/00MathReview/00MR05Qwizm}
-  \input{../pikz/00MathReview/00MR05Qwizm}
+\begin{frame}{pikz/01MathReview/01MR05Qwizm}
+  \input{../pikz/01MathReview/01MR05Qwizm}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/00MathReview/00MR06}
-  \input{../pikz/00MathReview/00MR06}
+\begin{frame}{pikz/01MathReview/01MR06}
+  \input{../pikz/01MathReview/01MR06}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/00MathReview/00MR06Qwizm}
-  \input{../pikz/00MathReview/00MR06Qwizm}
+\begin{frame}{pikz/01MathReview/01MR06Qwizm}
+  \input{../pikz/01MathReview/01MR06Qwizm}
 \end{frame}
 
 
@@ -406,20 +437,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Misc Bits}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/misc/penrose}
-  \input{../pikz/misc/penrose}
-\end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \begin{frame}{pikz/misc/penstar}
-%   \input{../pikz/misc/penstar}
-% \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -537,13 +560,13 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/09Frames/09CF04b}  
+\begin{frame}{pikz/09Frames/09CF04b}
   \input{../pikz/09Frames/09CF04b}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}{pikz/09Frames/09CF04bQwizm}  
+\begin{frame}{pikz/09Frames/09CF04bQwizm}
   \input{../pikz/09Frames/09CF04bQwizm}
 \end{frame}
 
