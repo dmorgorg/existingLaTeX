@@ -8,7 +8,6 @@
 *.synctex.gz
 *.synctex.gz(busy)
 *.toc
-*.md
 *.vrb
 docs/
 harvardProposal/tufte-latex
